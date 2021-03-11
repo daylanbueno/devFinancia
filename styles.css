@@ -1,0 +1,294 @@
+
+
+html {
+    font-size: 93.75% ;
+}
+
+:root {
+    --dark-blue: #363f5f;
+    --green: #49aa26;
+    --light-green: #3dd705;
+    --red: #e92929;
+}
+
+* {
+   margin:0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+    background: #f2f0f5;
+    font-family: 'Poppins', 'sans-serif';
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+
+}
+ 
+.container {
+    width: min(90vw, 800px);
+    margin: auto;
+}
+
+h2 {
+    margin-top: 3.2rem;
+    margin-bottom: 0.8rem;
+    color: var(--dark-blue);
+
+    font-weight: normal;
+}
+
+a {
+    color:var(--green);
+    text-decoration: none;
+}
+
+a:hover{
+    color: var(--light-green);
+}
+
+
+/* links e botões */
+button {
+    width: 100%;
+    height: 50px;
+    border: none;
+    color: white;
+    background: var(--green);
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+button:hover{
+    background: #3dd705;
+}
+
+.button.cancel {
+    border: 2px var(--red) solid;
+    color: var(--red);
+    border-radius: 0.25rem;
+
+    width: 100%;
+    height: 50px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0.6;
+}
+
+.button.cancel:hover { 
+    opacity: 1;
+}
+
+.button.new {
+    display: inline-block;
+    margin-bottom: 0.8rem;
+}
+
+
+
+header {
+    background: #2d4a22;
+    padding: 2rem 2rem 10rem 6rem;
+    text-align: center;    
+}
+
+#logo { 
+    color:#fff;
+    font-weight: 100;
+    font-size: 400;
+}
+
+#balance {
+    margin-top: -8rem;
+}
+
+#balance h2 {
+    color: #fff;
+    margin-top: -0rem;
+}
+
+.card {
+    background: #fff;
+    padding: 1.5rem 2rem;
+    border-radius: 0.25rem;
+
+    margin-bottom: 2rem;
+}
+
+.card h3 {
+    display: flex;
+    justify-content: space-between;
+
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+ .card p {
+     font-size: 2rem;
+     line-height: 3rem;
+
+    margin-top: 1rem;
+}
+
+.card.total {
+    background: var(--green);
+    color:#fff
+}
+
+#transaction {
+    display: block;
+    overflow-x: auto;
+}
+
+#data-table {
+    border-spacing: 0  0.5rem;
+    color: #969cb3;
+    width: 100%;
+}
+
+table thead th :first-child, 
+tbody td :first-child { 
+    border-radius: 0.5rem 0 0 0.5rem;
+}
+
+#data-table th { 
+    background: white;
+    font-weight: normal;
+    padding: 1rem 2rem;
+    text-align: left;
+} 
+
+#data-table td { 
+    background: white;
+}
+
+table td {
+    background: white;
+    padding: 1rem 2rem;
+}
+
+table tbody tr { 
+    opacity: 0.7;
+} 
+
+table tbody tr:hover{ 
+    opacity: 10;
+}
+
+td.description {
+    color: var(--dark-blue)
+}
+
+td.income {
+    color: #12a454
+}
+
+td.expense {
+    color: #e93939
+}
+
+/* modal ----------------------------------------*/
+.modal-overlay {
+    width: 100%;
+    height: 100%;
+
+    position: fixed;
+    background: rgba(0,0,0,0.7);
+    top: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal {
+    background: #f2f0f5;
+    padding: 2.4rem;
+    max-width: 500px;
+    width: 90%;
+    z-index: 1;
+}
+
+/* FORMULÁRIO ====================*/
+#form {
+    max-width: 500px;
+}
+
+#form h2  {
+    margin-top: 0;
+}
+
+.input-group {
+    margin-top: 0.8rem;
+}
+
+.input-group.actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+}
+
+.input-group.actions button,
+.input-group .button {
+    width: 48%;
+
+}
+
+#form input {
+    border: none;
+    border-radius: 1.2rem;
+
+    padding: 0.8rem;
+    width: 100%;
+}
+
+#form small  {
+    opacity: 0.4;
+}
+
+footer {
+    margin-top: 500px;
+    text-align: center;
+    padding: 4rem 0 2rem;
+
+    color: var(--dark-blue);
+    opacity: 0.6;
+}
+
+/* Responsividade ---------------------------*/
+@media(min-width: 800px) {
+    html {
+        font-size: 87.5%;
+    }
+    #balance {
+        display: flex;
+        justify-content: center;
+    }
+    .card:first-child {
+        margin-left: 0;
+    }
+    .card {
+        margin-left: 1rem;
+    }
+
+}
